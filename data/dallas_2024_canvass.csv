@@ -1,0 +1,106 @@
+"column","contest","canvass_page","contest_canvass","candidate_canvass","candidate_cvr","party","votes_official"
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Donald J. Trump/Jd Vance","Donald J. Trump / JD Vance","REP",322569
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Kamala D. Harris/Tim Walz","Kamala D. Harris / Tim Walz","DEM",511118
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Chase Oliver/Mike Ter Maat","Chase Oliver / Mike Ter Maat","LIB",6273
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Jill Stein/Rudolph Ware","Jill Stein / Rudolph Ware","GRE",8988
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Shiva Ayyadurai/Crystal Ellis",,"WRI",17
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Jessie Cuellar/Wesley Lasley",,"WRI",7
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Claudia De La Cruz/Karina Garcia",,"WRI",239
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Cherunda Fox/Harlan Mcvay",,"WRI",2
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Peter Sonski/Lauren Onak",,"WRI",419
+5,"President and Vice President",1,"PRESIDENT/VICE-PRESIDENT","Cornel West/Melina Abdullah",,"WRI",240
+6,"United States Senator (4653)",2,"U.S. SENATOR","Ted Cruz","Ted Cruz","REP",291528
+6,"United States Senator (4653)",2,"U.S. SENATOR","Colin Allred","Colin Allred (20485)","DEM",531153
+6,"United States Senator (4653)",2,"U.S. SENATOR","Ted Brown","Ted Brown","LIB",19522
+6,"United States Senator (4653)",2,"U.S. SENATOR","Tracy Andrus",,"WRI",52
+6,"United States Senator (4653)",2,"U.S. SENATOR","Analisa Roche",,"WRI",170
+7,"United States Representative, District 5 (4656)",3,"U. S. REPRESENTATIVE DISTRICT 5","Lance Gooden","Lance Gooden","REP",66365
+7,"United States Representative, District 5 (4656)",3,"U. S. REPRESENTATIVE DISTRICT 5","Ruth ""Truth"" Torres","Ruth ""Truth"" Torres (20313)","DEM",70227
+8,"United States Representative, District 6 (4659)",4,"U. S. REPRESENTATIVE DISTRICT 6","Jake Ellzey","Jake Ellzey","REP",19343
+8,"United States Representative, District 6 (4659)",4,"U. S. REPRESENTATIVE DISTRICT 6","John Love lii","John Love III (20315)","DEM",20187
+9,"United States Representative, District 24 (4662)",5,"U. S. REPRESENTATIVE DISTRICT 24","Beth Van Duyne","Beth Van Duyne","REP",76477
+9,"United States Representative, District 24 (4662)",5,"U. S. REPRESENTATIVE DISTRICT 24","Sam Eppler","Sam Eppler","DEM",59938
+10,"United States Representative, District 30 (4665)",6,"U. S. REPRESENTATIVE DISTRICT 30","Jasmine Crockett","Jasmine Crockett (20495)","DEM",183848
+10,"United States Representative, District 30 (4665)",6,"U. S. REPRESENTATIVE DISTRICT 30","Jrmar ""Jj"" Jefferson","Jrmar ""JJ"" Jefferson","LIB",31671
+11,"United States Representative, District 32 (4668)",7,"U. S. REPRESENTATIVE DISTRICT 32","Darrell Day","Darrell Day","REP",71272
+11,"United States Representative, District 32 (4668)",7,"U. S. REPRESENTATIVE DISTRICT 32","Julie Johnson","Julie Johnson","DEM",120160
+11,"United States Representative, District 32 (4668)",7,"U. S. REPRESENTATIVE DISTRICT 32","Kevin A. Hale","Kevin A. Hale","LIB",4913
+12,"United States Representative, District 33 (4671)",8,"U. S. REPRESENTATIVE DISTRICT 33","Patrick David Gillespie","Patrick David Gillespie (20658)","REP",27965
+12,"United States Representative, District 33 (4671)",8,"U. S. REPRESENTATIVE DISTRICT 33","Marc Veasey","Marc Veasey (20505)","DEM",57776
+13,"Railroad Commissioner (4674)",9,"RAILROAD COMMISSIONER","Christi Craddick","Christi Craddick (20507)","REP",313563
+13,"Railroad Commissioner (4674)",9,"RAILROAD COMMISSIONER","Katherine Culbert","Katherine Culbert (20325)","DEM",467933
+13,"Railroad Commissioner (4674)",9,"RAILROAD COMMISSIONER","Hawk Dunlap","Hawk Dunlap","LIB",19817
+13,"Railroad Commissioner (4674)",9,"RAILROAD COMMISSIONER","Eddie Espinoza","Eddie Espinoza","GRE",22995
+13,"Railroad Commissioner (4674)",9,"RAILROAD COMMISSIONER","Richard Mckibbin",,"WRI",114
+14,"Justice, Supreme Court, Place 2 (4677)",10,"JUSTICE, SUPREME COURT, PLACE 2","Jimmy Blacklock","Jimmy Blacklock (20509)","REP",329664
+14,"Justice, Supreme Court, Place 2 (4677)",10,"JUSTICE, SUPREME COURT, PLACE 2","Dasean Jones","DaSean Jones (20618)","DEM",489555
+15,"Justice, Supreme Court, Place 4 (4680)",11,"JUSTICE, SUPREME COURT, PLACE 4","John Devine","John Devine","REP",319355
+15,"Justice, Supreme Court, Place 4 (4680)",11,"JUSTICE, SUPREME COURT, PLACE 4","Christine Vinh Weems","Christine Vinh Weems (20329)","DEM",497011
+16,"Justice, Supreme Court, Place 6 (4683)",12,"JUSTICE, SUPREME COURT, PLACE 6","Jane Bland","Jane Bland (20660)","REP",315218
+16,"Justice, Supreme Court, Place 6 (4683)",12,"JUSTICE, SUPREME COURT, PLACE 6","Bonnie Lee Goldstein","Bonnie Lee Goldstein (20331)","DEM",475691
+16,"Justice, Supreme Court, Place 6 (4683)",12,"JUSTICE, SUPREME COURT, PLACE 6","J. David Roberson","J. David Roberson","LIB",28514
+17,"Presiding Judge, Court of Criminal Appeals (4686)",13,"PRESIDING JUDGE, COURT OF CRIMINAL APPEALS","David J. Schenck","David J. Schenck","REP",324145
+17,"Presiding Judge, Court of Criminal Appeals (4686)",13,"PRESIDING JUDGE, COURT OF CRIMINAL APPEALS","Holly Taylor","Holly Taylor (20333)","DEM",482975
+18,"Judge, Court of Criminal Appeals, Place 7 (4689)",14,"JUDGE, COURT OF CRIMINAL APPEALS, PLACE 7","Gina Parker","Gina Parker","REP",326890
+18,"Judge, Court of Criminal Appeals, Place 7 (4689)",14,"JUDGE, COURT OF CRIMINAL APPEALS, PLACE 7","Nancy Mulder","Nancy Mulder (20335)","DEM",490642
+19,"Judge, Court of Criminal Appeals, Place 8 (4692)",15,"JUDGE, COURT OF CRIMINAL APPEALS, PLACE 8","Lee Finley","Lee Finley","REP",329515
+19,"Judge, Court of Criminal Appeals, Place 8 (4692)",15,"JUDGE, COURT OF CRIMINAL APPEALS, PLACE 8","Chika Anyiam","Chika Anyiam (20400)","DEM",486318
+20,"Member, State Board of Education, District 11 (4695)",16,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 11","Brandon Hall","Brandon Hall","REP",14433
+20,"Member, State Board of Education, District 11 (4695)",16,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 11","Rayna Glasser","Rayna Glasser (20443)","DEM",17547
+20,"Member, State Board of Education, District 11 (4695)",16,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 11","Hunter Crow","Hunter Crow","GRE",1228
+21,"Member, State Board of Education, District 12 (4698)",17,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 12","Pam Little","Pam Little","REP",75301
+21,"Member, State Board of Education, District 12 (4698)",17,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 12","George King","George King (20511)","DEM",63273
+22,"Member, State Board of Education, District 13- Unexpired Term",18,"MEMBER, STATE BOARD OF EDUCATION, DISTRICT 13","Tiffany Clark","Tiffany Clark","DEM",296639
+23,"State Senator, District 12 (4701)",19,"STATE SENATOR, DISTRICT 12","Tan Parker","Tan Parker","REP",74274
+23,"State Senator, District 12 (4701)",19,"STATE SENATOR, DISTRICT 12","Stephanie Draper","Stephanie Draper (20665)","DEM",68286
+24,"State Senator, District 16 (4704)",20,"STATE SENATOR, DISTRICT 16","Nathan Johnson","Nathan Johnson (20673)","DEM",187557
+25,"State Senator, District 23 State (4707)",21,"STATE SENATOR, DISTRICT 23","Royce West","Royce West (20677)","DEM",230228
+26,"State Representative, District 100 (4710)",22,"STATE REPRESENTATIVE DISTRICT 100","Venton Jones","Venton Jones (20515)","DEM",34119
+27,"State Representative, District 102 (4713)",23,"STATE REPRESENTATIVE DISTRICT 102","Ana-Maria Ramos","Ana-Maria Ramos (20341)","DEM",35788
+28,"State Representative, District 103 (4716)",24,"STATE REPRESENTATIVE DISTRICT 103","Rafael Anchia","Rafael Anchia (20519)","DEM",40330
+29,"State Representative, District 104 (4719)",25,"STATE REPRESENTATIVE DISTRICT 104","Jessica Gonzalez","Jessica Gonzalez (20521)","DEM",33295
+30,"State Representative, District 105 (4722)",26,"STATE REPRESENTATIVE DISTRICT 105","Rose Cannaday","Rose Cannaday","REP",18928
+30,"State Representative, District 105 (4722)",26,"STATE REPRESENTATIVE DISTRICT 105","Terry Meza","Terry Meza (20347)","DEM",22850
+31,"State Representative, District 107 (4725)",27,"STATE REPRESENTATIVE DISTRICT 107","Linda Garcia","Linda Garcia (20349)","DEM",29546
+32,"State Representative, District 108 (4728)",28,"STATE REPRESENTATIVE DISTRICT 108","Morgan Meyer","Morgan Meyer","REP",60227
+32,"State Representative, District 108 (4728)",28,"STATE REPRESENTATIVE DISTRICT 108","Elizabeth Ginsberg","Elizabeth Ginsberg (20523)","DEM",44307
+33,"State Representative, District 109 (4731)",29,"STATE REPRESENTATIVE DISTRICT 109","Aicha Davis","Aicha Davis (20527)","DEM",56138
+34,"State Representative, District 110 (4734)",30,"STATE REPRESENTATIVE DISTRICT 110","Toni Rose","Toni Rose (20529)","DEM",30618
+35,"State Representative, District 111 (4737)",31,"STATE REPRESENTATIVE DISTRICT 111","Yvonne Davis","Yvonne Davis (20531)","DEM",53039
+36,"State Representative, District 112 (4740)",32,"STATE REPRESENTATIVE DISTRICT 112","Angie Chen Button","Angie Chen Button","REP",47456
+36,"State Representative, District 112 (4740)",32,"STATE REPRESENTATIVE DISTRICT 112","Averie Bishop","Averie Bishop (20533)","DEM",40645
+37,"State Representative, District 113 (4743)",33,"STATE REPRESENTATIVE DISTRICT 113","Stephen Stanley","Stephen Stanley","REP",25732
+37,"State Representative, District 113 (4743)",33,"STATE REPRESENTATIVE DISTRICT 113","Rhetta Andrews Bowers","Rhetta Andrews Bowers (20535)","DEM",33547
+38,"State Representative, District 114 (4746)",34,"STATE REPRESENTATIVE DISTRICT 114","Aimee Ramsey","Aimee Ramsey","REP",25839
+38,"State Representative, District 114 (4746)",34,"STATE REPRESENTATIVE DISTRICT 114","John Bryant","John Bryant (20537)","DEM",43554
+39,"State Representative, District 115 (4749)",35,"STATE REPRESENTATIVE DISTRICT 115","John Jun","John Jun","REP",31709
+39,"State Representative, District 115 (4749)",35,"STATE REPRESENTATIVE DISTRICT 115","Cassandra Hernandez","Cassandra Hernandez (20539)","DEM",37692
+40,"Chief Justice, 5th Court of Appeals District (4752)",36,"CHIEF JUSTICE, 5TH COURT OF APPEALS DISTRICT","Justin Jay ""J.J."" Koch","Justin Jay ""J.J."" Koch","REP",321439
+40,"Chief Justice, 5th Court of Appeals District (4752)",36,"CHIEF JUSTICE, 5TH COURT OF APPEALS DISTRICT","Staci Williams","Staci Williams (20687)","DEM",485220
+41,"Justice, 5th Court of Appeals District, Place 2 (4755)",41,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 2","Jessica Lewis","Jessica Lewis","REP",327161
+41,"Justice, 5th Court of Appeals District, Place 2 (4755)",41,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 2","Robbie Partida-Kipness","Robbie Partida-Kipness (20545)","DEM",479548
+42,"Justice, 5th Court of Appeals District, Place 5 (4758)",42,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 5","Cynthia Barbare","Cynthia Barbare","REP",319813
+42,"Justice, 5th Court of Appeals District, Place 5 (4758)",42,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 5","Erin A. Nowell","Erin A. Nowell (20547)","DEM",487664
+43,"Justice, 5th Court of Appeals District, Place 9 (4761)",43,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 9","Matthew J. Kolodoski","Matthew J. Kolodoski","REP",314820
+43,"Justice, 5th Court of Appeals District, Place 9 (4761)",43,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 9","Tina Clinton","Tina Clinton (20367)","DEM",492608
+44,"Justice, 5th Court of Appeals District, Place 10 (4764)",37,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 10","Earl Jackson","Earl Jackson","REP",317118
+44,"Justice, 5th Court of Appeals District, Place 10 (4764)",37,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 10","Amanda Reichek","Amanda Reichek (20369)","DEM",489917
+45,"Justice, 5th Court of Appeals District, Place 11 (4767)",38,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 11","Gino J. Rossini","Gino J. Rossini","REP",321977
+45,"Justice, 5th Court of Appeals District, Place 11 (4767)",38,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 11","Kim Cooks","Kim Cooks (20549)","DEM",485626
+46,"Justice, 5th Court of Appeals District, Place 12 (4770)",39,"JUSTICE, STH COURT OF APPEALS DISTRICT, PLACE 12","Mike Lee","Mike Lee","REP",322475
+46,"Justice, 5th Court of Appeals District, Place 12 (4770)",39,"JUSTICE, STH COURT OF APPEALS DISTRICT, PLACE 12","Ken Molberg","Ken Molberg (20373)","DEM",485432
+47,"Justice, 5th Court of Appeals District, Place 13 (4773)",40,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 13","Emily A. Miskel","Emily A. Miskel","REP",316875
+47,"Justice, 5th Court of Appeals District, Place 13 (4773)",40,"JUSTICE, 5TH COURT OF APPEALS DISTRICT, PLACE 13","Tonya Parker","Tonya Parker (20375)","DEM",491272
+48,"District Judge, 14th Judicial District (4776)",44,"DISTRICT JUDGE, 14TH JUDICIAL DISTRICT","Leah Feldhendler","Leah Feldhendler","REP",320407
+48,"District Judge, 14th Judicial District (4776)",44,"DISTRICT JUDGE, 14TH JUDICIAL DISTRICT","Eric V. Moyé","Eric V. Moyé (20377)","DEM",485549
+49,"District Judge, 95th Judicial District (4779)",45,"DISTRICT JUDGE, 95TH JUDICIAL DISTRICT","Monica Purdy","Monica Purdy (20379)","DEM",611311
+50,"District Judge, 162nd Judicial District (4782)",46,"DISTRICT JUDGE, 162ND JUDICIAL DISTRICT","Ashley Wysocki","Ashley Wysocki","REP",317610
+50,"District Judge, 162nd Judicial District (4782)",46,"DISTRICT JUDGE, 162ND JUDICIAL DISTRICT","Kim Bailey","Kim Bailey","DEM",488611
+51,"Criminal District Judge, Court No. 2 (4785)",47,"CRIMINAL DISTRICT JUDGE, DALLAS COUNTY NUMBER 2","Elizabeth Davis Frizell","Elizabeth Davis Frizell (20383)","DEM",610320
+52,"Criminal District Judge, Court No. 3 (4788)",48,"CRIMINAL DISTRICT JUDGE, DALLAS COUNTY NUMBER 3","Audra Ladawn Riley","Audra LaDawn Riley (20385)","DEM",607381
+53,"Criminal District Judge, Court No. 4 (4791)",49,"CRIMINAL DISTRICT JUDGE, DALLAS COUNTY NUMBER 4","Dominique Collins","Dominique Collins (20387)","DEM",609130
+54,"Sheriff (4794)",50,"SHERIFF","Marian Brown","Marian Brown (20389)","DEM",619332
+55,"County Tax Assessor-Collector",51,"COUNTY TAX ASSESSOR-COLLECTOR","John R. Ames","John R. Ames","DEM",621050
+56,"County Commissioner, Precinct No. 1 (4800)",52,"COUNTY COMMISSIONER PRECINCT 1","Jason Metcalf","Jason Metcalf","REP",71763
+56,"County Commissioner, Precinct No. 1 (4800)",52,"COUNTY COMMISSIONER PRECINCT 1","Theresa Marie Daniel","Theresa Marie Daniel (20393)","DEM",104117
+57,"County Commissioner, Precinct No. 3",53,"COUNTY COMMISSIONER PRECINCT 3","John Wiley Price","John Wiley Price","DEM",177180

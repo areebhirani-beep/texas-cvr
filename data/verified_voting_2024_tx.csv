@@ -1,0 +1,9 @@
+county,fips,make,pp_system,pp_acc_system,abs_system,source_url,retrieved
+Bexar,48029,ES&S,BMDN,MBDN,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Burnet,48053,Hart InterCivic,DREN,DREN,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Cooke,48097,ES&S,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Dallas,48113,ES&S,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Hidalgo,48215,Hart InterCivic,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Parker,48367,Hart InterCivic,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Tarrant,48439,Hart InterCivic,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09
+Webb,48479,ES&S,BMDS,BMDS,BFOS,https://verifiedvoting.org/wp-content/themes/dt-the7-child/verifier/api/api_sandbox.php?db_year=2024&state_fips=48&county_fips=113&info_only=1,2026-11-09

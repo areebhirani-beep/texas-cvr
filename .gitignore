@@ -1,3 +1,6 @@
 raw/
 .Rhistory
 .DS_Store
+out/
+*.xlsx
+*.zip
