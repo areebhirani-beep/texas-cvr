@@ -97,7 +97,7 @@ Two judgment calls matter most. First, the second sheets cannot be linked to the
 
 ## AI use
 
-Claude Code (Anthropic's AI coding tool) wrote the Dallas pipeline, the format notes, the vendor column and this section on November 9, 2026. I have started checking that work by hand: on November 10, 2026 I confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. `CHECKLIST.md` lists the rest of what I will check, and I will update the second column below as I go.
+Claude Code (Anthropic's AI coding tool) wrote the Dallas pipeline, the format notes, the vendor column and this section on November 9, 2026. I have started checking that work by hand: on November 10, 2026 I read through both Dallas R scripts, and I confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. `CHECKLIST.md` lists the rest of what I will check, and I will update the second column below as I go.
 
 | File | Status |
 |---|---|
@@ -105,8 +105,8 @@ Claude Code (Anthropic's AI coding tool) wrote the Dallas pipeline, the format n
 | `.gitignore` | AI-generated (Claude Code), not yet manually checked |
 | `CHECKLIST.md` | AI-generated (Claude Code), not yet manually checked |
 | `docs/FORMAT_NOTES.md` | AI-generated (Claude Code), not yet manually checked |
-| `R/dallas_2024.R` | AI-generated (Claude Code), not yet manually checked |
-| `R/dallas_2024_canvass_ocr.R` | AI-generated (Claude Code), not yet manually checked |
+| `R/dallas_2024.R` | AI-generated (Claude Code), manually reviewed by Areeb on Nov 10, 2026 |
+| `R/dallas_2024_canvass_ocr.R` | AI-generated (Claude Code), manually reviewed by Areeb on Nov 10, 2026 |
 | `data/dallas_2024_manifest.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/dallas_2024_canvass.csv` | AI-generated (Claude Code) from OCR. Total ballots, Trump and Harris rows manually checked by Areeb on Nov 10, 2026; other rows not yet checked |
 | `data/dallas_2024_validation.csv` | AI-generated (Claude Code), not yet manually checked |
