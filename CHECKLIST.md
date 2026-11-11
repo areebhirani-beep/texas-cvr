@@ -1,6 +1,6 @@
 # Manual check list: Dallas Nov 2024
 
-Everything in the Dallas pipeline was AI-generated (Claude Code) and has not been checked by hand. Tick each box only after doing it yourself, then update the "AI use" table in README.md with the date.
+Everything in the Dallas pipeline was AI-generated (Claude Code). Areeb is checking it by hand item by item, and a ticked box means he did that check himself. Tick each box only after doing it yourself, then update the "AI use" table in README.md with the date.
 
 Run `Rscript R/dallas_2024.R` first (about 1 minute after the download).
 
@@ -15,8 +15,8 @@ Run `Rscript R/dallas_2024.R` first (about 1 minute after the download).
 - [ ] Confirm that rows whose style ends in "[2]" never contain President, Sheriff or any statewide judge.
 
 ## Totals vs. the official canvass
-- [ ] Open `Nov 5 2024 Final Canvass (signed sealed).pdf` (6. Canvass/Results/Summary Results by City) and check "Total # of Voters Voted: 858562" on page 1.
-- [ ] Check every number in `data/dallas_2024_canvass.csv` against the PDF. It was read by OCR (tesseract), so a misread digit is possible. Page 45 (95th District Judge, 611,311) was misread once already.
+- [x] (Areeb, Nov 10 2026) Open `Nov 5 2024 Final Canvass (signed sealed).pdf` (6. Canvass/Results/Summary Results by City) and check "Total # of Voters Voted: 858562" on page 1.
+- [ ] Check every number in `data/dallas_2024_canvass.csv` against the PDF. (Areeb checked Trump 322,569 and Harris 511,118 by hand on Nov 10 2026; the other rows are not checked yet.) It was read by OCR (tesseract), so a misread digit is possible. Page 45 (95th District Judge, 611,311) was misread once already.
 - [ ] Check the 11 mismatches in `data/dallas_2024_validation.csv` against the write-in lines in `Final Unofficial Results Report.pdf` (e.g. "Write-In: Donald Trump/ JD Vance 101"). The CVR should be short by exactly the write-ins cast for listed candidates. Chase Oliver is short by 1 while the unofficial report shows 0, so that one is unexplained.
 - [ ] Pick 2 City of Dallas propositions and compare the For / Against totals in `data/dallas_2024_choice_crosswalk.csv` with `Dallas County Unoffical Final.pdf` or the city canvass. I did not check any local contest.
 
