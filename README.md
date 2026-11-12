@@ -18,6 +18,7 @@ This repo is my work for Professor Shiro Kuriwaki's cast vote record (CVR) proje
 | `data/dallas_2024_manifest.csv` | URL, size, sha256 and download date of the 9 Dallas files |
 | `data/dallas_2024_canvass.csv` | Official Dallas Nov 2024 results per candidate, matched to the CVR spelling |
 | `data/dallas_2024_validation.csv` | CVR totals vs. the official canvass |
+| `data/dallas_2024_item_choice_info.tab` | The Dallas metadata file in the Dataverse 11602209 format, 308 rows across 96 contests |
 | `data/dallas_2024_choice_crosswalk.csv` | Metadata choice codes next to the candidate names, for checking |
 | `data/verified_voting_2024_tx.csv` | Verified Voting 2024 equipment rows for the 8 counties with public CVRs |
 | `docs/FORMAT_NOTES.md` | The two Dataverse formats copied, and every judgment call |
@@ -80,10 +81,10 @@ Rscript R/dallas_2024.R
 
 | Output | Format copied | Rows |
 |---|---|---|
-| `out/cvrs/state=TEXAS/county_name=DALLAS/part-0.parquet` (190 MB) | doi:10.7910/DVN/PQQ3KV: long, one row per ballot x contest, 9 columns `cvr_id, precinct_medsl, precinct_cvr, office, district, candidate, magnitude, party, party_detailed` | 32,042,797 |
-| `out/dallas_2024_item_choice_info.tab` | Dataverse file 11602209 (`APSR_item_choice_info`): one row per contest x choice, same 25 columns | 308 (96 contests) |
+| `out/cvrs/state=TEXAS/county_name=DALLAS/part-0.parquet` (32 MB, shared on Google Drive) | doi:10.7910/DVN/PQQ3KV: long, one row per ballot x contest, 9 columns `cvr_id, precinct_medsl, precinct_cvr, office, district, candidate, magnitude, party, party_detailed` | 32,042,797 |
+| `data/dallas_2024_item_choice_info.tab` (31 KB, in this repo) | Dataverse file 11602209 (`APSR_item_choice_info`): one row per contest x choice, same 25 columns | 308 (96 contests) |
 
-`out/` is not committed because of its size, and you can run the pipeline from the repo folder with `Rscript R/dallas_2024.R`, which takes about 1 minute after the download and needs about 8 GB of RAM.
+The vote parquet in `out/` is not committed because of its size, but the metadata file is small, so I copied it into `data/`, and you can run the pipeline from the repo folder with `Rscript R/dallas_2024.R`, which takes about 1 minute after the download and needs about 8 GB of RAM.
 
 I checked the output against the official canvass, which is the Texas SOS canvass report signed by the County Clerk on November 19, 2024, and I read it in with OCR:
 
@@ -97,28 +98,29 @@ There are two judgment calls that I think matter the most. The first is that the
 
 ## AI use
 
-Claude Code, which is Anthropic's AI coding tool, generated all of the code and data files in this repo, starting with the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and then the Dallas pipeline, the format notes, the vendor column and the first version of this section later that day. I have read through and reviewed most of the R code myself, starting with the two Dallas scripts on November 10, 2026 and finishing the rest by November 12, 2026, and on November 10 I also confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. I have not finished checking the data files and docs yet, so `CHECKLIST.md` lists the rest of what I am going to check, and I will update the table below as I go.
+Claude Code, which is Anthropic's AI coding tool, generated all of the code and data files in this repo, starting with the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and then the Dallas pipeline, the format notes, the vendor column and the first version of this section later that day. I have read through and reviewed most of the R code myself, starting with the two Dallas scripts on November 10, 2026 and finishing the rest by November 12, 2026, and on November 10 I also confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. On November 12, 2026 I finished the raw file, ballot and canvass sections of `CHECKLIST.md`, which means that I compared 5 ballots cell by cell with the parquet, checked every row of the canvass file against the signed PDF and checked the 11 mismatches against the county's unofficial final report, and I also read through this README and the checklist. The metadata and vendor checks are what I still have left, and I will update the table below as I finish them.
 
 | File | Status |
 |---|---|
-| `README.md` | AI-generated (Claude Code), not yet manually checked |
+| `README.md` | AI-generated (Claude Code), manually checked by Areeb on Nov 12, 2026 |
 | `.gitignore` | AI-generated (Claude Code), not yet manually checked |
-| `CHECKLIST.md` | AI-generated (Claude Code), not yet manually checked |
+| `CHECKLIST.md` | AI-generated (Claude Code), manually checked by Areeb on Nov 12, 2026 |
 | `docs/FORMAT_NOTES.md` | AI-generated (Claude Code), not yet manually checked |
 | `R/dallas_2024.R` | AI-generated (Claude Code), manually reviewed by Areeb on Nov 10, 2026 |
 | `R/dallas_2024_canvass_ocr.R` | AI-generated (Claude Code), manually reviewed by Areeb on Nov 10, 2026 |
-| `data/dallas_2024_manifest.csv` | AI-generated (Claude Code), not yet manually checked |
-| `data/dallas_2024_canvass.csv` | AI-generated (Claude Code) from OCR. Total ballots, Trump and Harris rows manually checked by Areeb on Nov 10, 2026; other rows not yet checked |
-| `data/dallas_2024_validation.csv` | AI-generated (Claude Code), not yet manually checked |
-| `data/dallas_2024_choice_crosswalk.csv` | AI-generated (Claude Code), not yet manually checked |
+| `data/dallas_2024_manifest.csv` | AI-generated (Claude Code), manually checked by Areeb on Nov 12, 2026 (file count, sizes and sha256) |
+| `data/dallas_2024_canvass.csv` | AI-generated (Claude Code) from OCR, every row manually checked by Areeb against the signed canvass PDF (total ballots, Trump and Harris on Nov 10, 2026, and the rest on Nov 12, 2026) |
+| `data/dallas_2024_validation.csv` | AI-generated (Claude Code), manually checked by Areeb on Nov 12, 2026 (the 11 mismatches against the write-in lines in the unofficial final report) |
+| `data/dallas_2024_item_choice_info.tab` | AI-generated (Claude Code), not yet manually checked (the metadata checks in `CHECKLIST.md` cover it) |
+| `data/dallas_2024_choice_crosswalk.csv` | AI-generated (Claude Code), partly checked: Areeb compared 2 City of Dallas propositions on Nov 12, 2026, but the parties and choice codes are not checked yet |
 | `data/verified_voting_2024_tx.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/tx_cvr_inventory.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/tx_cvr_inventory.parquet` | AI-generated (Claude Code), not yet manually checked |
 | `data/votedatabase_tx_summary.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/cooke_2024_general.parquet` | AI-generated (Claude Code), not yet manually checked |
-| `R/check_links.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
-| `R/cooke_2024.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
-| `R/votedatabase_summary.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
+| `R/check_links.R` | AI-generated (Claude Code), read through by Areeb by Nov 12, 2026 |
+| `R/cooke_2024.R` | AI-generated (Claude Code), read through by Areeb by Nov 12, 2026 |
+| `R/votedatabase_summary.R` | AI-generated (Claude Code), read through by Areeb by Nov 12, 2026 |
 
 When I finish checking a file, I change its status to "AI-generated, manually checked by Areeb on <date>", and I only use "written by Areeb" for files that I wrote by hand.
 
