@@ -1,6 +1,6 @@
 # texas-cvr
 
-Which Texas counties post cast vote records (CVRs) for the 2022, 2024 and 2026 elections, and what votedatabase.com/cvr/ already has for Texas. I put this together for Shiro Kuriwaki's CVR project. Links were last checked on November 9, 2026.
+This repo is my work for Professor Shiro Kuriwaki's cast vote record (CVR) project, and it keeps track of which Texas counties post their CVRs online for the 2022, 2024 and 2026 elections, what votedatabase.com/cvr/ already has for Texas, and the pipelines that turn the county files into the formats from Professor Kuriwaki's Dataverse releases. I last checked all of the links on November 9, 2026.
 
 ## Files
 
@@ -25,7 +25,7 @@ Which Texas counties post cast vote records (CVRs) for the 2022, 2024 and 2026 e
 
 ## Counties that post CVRs
 
-"P" = March primary, "R" = May primary runoff, "G" = November general. "req" means the county lists the CVR but says to file a public information request.
+In the table below, "P" is the March primary, "R" is the May primary runoff and "G" is the November general, and "req" means that the county lists the CVR but says that you have to file a public information request to get it.
 
 | County | 2022 P | 2022 R | 2022 G | 2024 P | 2024 R | 2024 G | 2026 P | 2026 R |
 |---|---|---|---|---|---|---|---|---|
@@ -38,26 +38,26 @@ Which Texas counties post cast vote records (CVRs) for the 2022, 2024 and 2026 e
 | Webb | | | | | | pdf | | |
 | Hidalgo | | | | pdf | | req | req | |
 
-- Tarrant files are Hart Verity CVRExport zips (the biggest is 2.26 GB for Nov 2024). Parker's 2022 and 2024 generals are the same kind of file.
-- Dallas Nov 2024 is 9 xlsx files in a folder called "CVR Redacted".
-- Webb Nov 2024 is a single 22,622-page PDF. The PDF ones would need table extraction before they are usable.
-- No county has posted the November 3, 2026 general yet (checked November 9, 2026). Tarrant, Dallas, Bexar and Parker are the most likely to post first.
+- The Tarrant files are Hart Verity CVRExport zips, and the biggest one is 2.26 GB for November 2024, and Parker's 2022 and 2024 generals are the same kind of file.
+- Dallas posted November 2024 as 9 xlsx files in a folder called "CVR Redacted".
+- Webb posted November 2024 as a single 22,622-page PDF, and from what I can tell all of the PDF counties would need table extraction before their files are usable.
+- No county had posted the November 3, 2026 general yet when I checked on November 9, 2026, and I think Tarrant, Dallas, Bexar and Parker are the most likely to post it first.
 
-I also checked these counties and found nothing posted for 2022 or later: Harris, Travis (2020 only), Collin, Denton (site blocks bots, partial check), Fort Bend, Montgomery, Williamson, Galveston, Brazoria, El Paso, Cameron, McLennan, Ellis, Bell, Midland, Randall, Comal, Kaufman, Ector, Potter. Rockwall and Hays still need a check by hand.
+I also checked these counties and did not find anything posted for 2022 or later: Harris, Travis (2020 only), Collin, Denton (the site blocks bots, so this was only a partial check), Fort Bend, Montgomery, Williamson, Galveston, Brazoria, El Paso, Cameron, McLennan, Ellis, Bell, Midland, Randall, Comal, Kaufman, Ector and Potter, and I still need to check Rockwall and Hays by hand.
 
 ## What votedatabase.com/cvr/ has for Texas
 
-70 county folders, about 1.88 million files and 41.6 GB. Almost all of it is the November 2020 general. There is nothing for 2024 or 2026.
+There are 70 Texas county folders with about 1.88 million files and 41.6 GB in total, and almost all of it is from the November 2020 general, with nothing at all for 2024 or 2026.
 
-- Nov 2022 general: Harris (per-ballot PDFs), Bexar (`CVR2022.csv`), Blanco, Brazoria (Hart zip).
-- 2022 primaries: Titus, Montgomery, Kerr, plus 11 files in `/cvr/2022Primaries/Texas/`.
-- Known errors: `Texas/Bexar/CVR.csv` is actually Andrews County 2020. Erath `CVR 2022.xlsx` is Nov 2020. Tarrant `Tarrant TX.csv` is precinct results, not a CVR. Four folders are misspelled: Burnett, Guadelupe, Hayes, Shackleford.
+- For the November 2022 general, there is Harris (per-ballot PDFs), Bexar (`CVR2022.csv`), Blanco and Brazoria (a Hart zip).
+- For the 2022 primaries, there is Titus, Montgomery and Kerr, plus 11 files in `/cvr/2022Primaries/Texas/`.
+- I found a few errors in the folders, which are that `Texas/Bexar/CVR.csv` is actually Andrews County's 2020 data, Erath's `CVR 2022.xlsx` is really from November 2020, and Tarrant's `Tarrant TX.csv` is precinct results and not a CVR, and four of the folder names are also misspelled (Burnett, Guadelupe, Hayes and Shackleford).
 
-The `years_in_names` column is a plain text match for 2016 to 2026 in file paths, so treat it as a hint. In Harris, Cass and Nolan the matches are ballot numbers in file names like `2024-cvr.pdf`, not years.
+The `years_in_names` column is just a plain text match for the years 2016 to 2026 in the file paths, so I would treat it as a hint and not a fact, because in Harris, Cass and Nolan the matches are actually ballot numbers in file names like `2024-cvr.pdf` and not years.
 
 ## How to run
 
-From the repo folder, in R 4.x with `readxl` and `nanoparquet` installed:
+From the repo folder, in R 4.x with `readxl` and `nanoparquet` installed, you can run these commands:
 
 ```
 install.packages(c("readxl", "nanoparquet"))
@@ -66,42 +66,42 @@ Rscript R/cooke_2024.R
 Rscript R/dallas_2024.R
 ```
 
-`check_links.R` sends a HEAD request to each link. Some county sites refuse HEAD, so for those it asks for the first byte only with curl (needs curl 7.84 or newer) and never downloads a whole file.
+`check_links.R` sends a HEAD request to each link, but some county sites refuse HEAD requests, so for those sites it asks for only the first byte with curl (which needs curl 7.84 or newer), and it never downloads a whole file.
 
-`votedatabase_summary.R` needs the crawl listing (`vd_texas.tsv`, date / size / path, about 200 MB), which is not in the repo because of its size: `Rscript R/votedatabase_summary.R path/to/vd_texas.tsv`.
+`votedatabase_summary.R` needs the crawl listing (`vd_texas.tsv`, with the date, size and path of each file, about 200 MB), which is not in the repo because of its size, and you can run it with `Rscript R/votedatabase_summary.R path/to/vd_texas.tsv`.
 
 ## Cooke County example
 
-`R/cooke_2024.R` reads the Cooke Nov 2024 xlsx (2.6 MB). It has 20,549 rows, one per ballot, which matches "Ballots Cast - Total" in the official canvass. The presidential column matches the canvass exactly: Trump 16,975, Harris 3,310, Oliver 107, Stein 40, undervotes 62. The 53 blank cells plus 2 "Write-in" cells add up to the 55 write-ins in the canvass.
+`R/cooke_2024.R` reads the Cooke November 2024 xlsx file (2.6 MB), which has 20,549 rows with one row per ballot, and that matches "Ballots Cast - Total" in the official canvass. The presidential column also matches the canvass exactly, with Trump at 16,975, Harris at 3,310, Oliver at 107, Stein at 40 and 62 undervotes, and the 53 blank cells plus the 2 "Write-in" cells add up to the 55 write-ins in the canvass.
 
 ## Dallas County, November 2024 general
 
-`R/dallas_2024.R` downloads the 9 county xlsx files (277 MB) into `raw/`, then writes two files in the formats of Prof. Kuriwaki's Dataverse releases (details in `docs/FORMAT_NOTES.md`):
+`R/dallas_2024.R` downloads the 9 county xlsx files (277 MB) into `raw/`, and then it writes two files that follow the formats of Professor Kuriwaki's Dataverse releases, which I explain in more detail in `docs/FORMAT_NOTES.md`:
 
 | Output | Format copied | Rows |
 |---|---|---|
 | `out/cvrs/state=TEXAS/county_name=DALLAS/part-0.parquet` (190 MB) | doi:10.7910/DVN/PQQ3KV: long, one row per ballot x contest, 9 columns `cvr_id, precinct_medsl, precinct_cvr, office, district, candidate, magnitude, party, party_detailed` | 32,042,797 |
 | `out/dallas_2024_item_choice_info.tab` | Dataverse file 11602209 (`APSR_item_choice_info`): one row per contest x choice, same 25 columns | 308 (96 contests) |
 
-`out/` is not committed because of its size. Run it from the repo folder with `Rscript R/dallas_2024.R` (about 1 minute after the download, needs about 8 GB of RAM).
+`out/` is not committed because of its size, and you can run the pipeline from the repo folder with `Rscript R/dallas_2024.R`, which takes about 1 minute after the download and needs about 8 GB of RAM.
 
-Checked against the official canvass (Texas SOS canvass report signed by the County Clerk on November 19, 2024, read by OCR):
+I checked the output against the official canvass, which is the Texas SOS canvass report signed by the County Clerk on November 19, 2024, and I read it in with OCR:
 
-- Ballots: the file has 873,455 rows, but 14,893 of them are the second sheet of two-sheet paper ballots. That leaves 858,562 ballots, the same as the canvass "Total # of Voters Voted".
-- 85 of 96 candidate totals match exactly. That covers all 6 US House races, all 3 state senate and 14 state house races, every judge, Sheriff, Tax Assessor and both commissioners.
-- The other 11 are President, US Senate and Railroad Commissioner, the three races with write-in candidates. The CVR is short by exactly the write-in votes cast for a listed candidate, which the canvass adds to that candidate (Trump -101, Harris -91, Stein -5, Cruz -31, Allred -42, Brown -8, and all 4 Railroad candidates). Those numbers match the write-in lines in the county's unofficial final report. The one I cannot explain is Chase Oliver, short by 1.
-- President in the CVR: Trump 322,468, Harris 511,027, Stein 8,983, Oliver 6,272, write-in 4,578, undervote 5,221, overvote 13.
-- Local propositions and city council races are not in the SOS canvass, so they have not been checked.
+- The file has 873,455 rows, but 14,893 of them are the second sheet of two-sheet paper ballots, which leaves 858,562 ballots, and that is the same as "Total # of Voters Voted" in the canvass.
+- 85 of the 96 candidate totals match exactly, which covers all 6 US House races, all 3 state senate races, all 14 state house races, every judge, the Sheriff, the Tax Assessor and both commissioners.
+- The other 11 are in President, US Senate and Railroad Commissioner, which are the three races with write-in candidates, and in those races the CVR is short by exactly the write-in votes cast for a listed candidate, which the canvass adds back to that candidate (Trump -101, Harris -91, Stein -5, Cruz -31, Allred -42, Brown -8, and all 4 Railroad candidates). Those numbers match the write-in lines in the county's unofficial final report, and the one difference that I still cannot explain is Chase Oliver, who is short by 1.
+- For President, the CVR has Trump at 322,468, Harris at 511,027, Stein at 8,983, Oliver at 6,272, write-ins at 4,578, undervotes at 5,221 and overvotes at 13.
+- Local propositions and city council races are not in the SOS canvass, so I have not checked those yet.
 
-Two judgment calls matter most. First, the second sheets cannot be linked to their first sheet, so they keep their own `cvr_id`. Second, blank cells in the three write-in races are coded WRITEIN. I think the county blanked write-in names when it redacted the file, but that is my inference. Both are explained in `docs/FORMAT_NOTES.md` and listed in `CHECKLIST.md`.
+There are two judgment calls that I think matter the most. The first is that the second sheets cannot be linked back to their first sheet, so they keep their own `cvr_id`, and the second is that blank cells in the three write-in races are coded as WRITEIN, because I believe the county blanked out the write-in names when it redacted the file, although that is my own inference. Both of these are explained in `docs/FORMAT_NOTES.md` and listed in `CHECKLIST.md`.
 
 ## AI use
 
-Claude Code (Anthropic's AI coding tool) wrote all of the code and data files in this repo: the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and the Dallas pipeline, the format notes, the vendor column and this section later that day. I have started checking that work by hand: on November 10, 2026 I read through both Dallas R scripts, and I confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. `CHECKLIST.md` lists the rest of what I will check, and I will update the second column below as I go.
+Claude Code, which is Anthropic's AI coding tool, generated all of the code and data files in this repo, starting with the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and then the Dallas pipeline, the format notes, the vendor column and the first version of this section later that day. I have read through and reviewed all of the R code myself, starting with the two Dallas scripts on November 10, 2026 and finishing the rest by November 12, 2026, and on November 10 I also confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. I have not finished checking the data files and docs yet, so `CHECKLIST.md` lists the rest of what I am going to check, and I will update the table below as I go.
 
 | File | Status |
 |---|---|
-| `README.md` | Dallas, vendor and AI use sections: AI-generated (Claude Code), not yet manually checked. Rest (Nov 9 morning commit): also AI-generated (Claude Code), not yet manually checked |
+| `README.md` | AI-generated (Claude Code), not yet manually checked |
 | `.gitignore` | AI-generated (Claude Code), not yet manually checked |
 | `CHECKLIST.md` | AI-generated (Claude Code), not yet manually checked |
 | `docs/FORMAT_NOTES.md` | AI-generated (Claude Code), not yet manually checked |
@@ -112,21 +112,21 @@ Claude Code (Anthropic's AI coding tool) wrote all of the code and data files in
 | `data/dallas_2024_validation.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/dallas_2024_choice_crosswalk.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/verified_voting_2024_tx.csv` | AI-generated (Claude Code), not yet manually checked |
-| `data/tx_cvr_inventory.csv` | `vendor` and `vendor_evidence` columns: AI-generated (Claude Code), not yet manually checked. Other columns: also AI-generated (Claude Code), not yet manually checked |
+| `data/tx_cvr_inventory.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/tx_cvr_inventory.parquet` | AI-generated (Claude Code), not yet manually checked |
 | `data/votedatabase_tx_summary.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/cooke_2024_general.parquet` | AI-generated (Claude Code), not yet manually checked |
-| `R/check_links.R` | AI-generated (Claude Code), not yet manually checked |
-| `R/cooke_2024.R` | AI-generated (Claude Code), not yet manually checked |
-| `R/votedatabase_summary.R` | AI-generated (Claude Code), not yet manually checked |
+| `R/check_links.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
+| `R/cooke_2024.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
+| `R/votedatabase_summary.R` | AI-generated (Claude Code), manually reviewed by Areeb by Nov 12, 2026 |
 
-When a file has been checked, change its status to "AI-generated, manually checked by Areeb on <date>". Use "written by Areeb" only for files written by hand.
+When I finish checking a file, I change its status to "AI-generated, manually checked by Areeb on <date>", and I only use "written by Areeb" for files that I wrote by hand.
 
 ## Data notes
 
-- Texas Election Code 1.012(f) (HB 5180, effective Sept 1, 2023) makes CVRs and ballot images open for public inspection starting the day after the final canvass. Posting them online is voluntary, which is why only a few counties do it.
-- SOS Election Advisory 2024-20 (June 6, 2024) tells counties to redact precinct, ballot style or polling place when it could identify a voter. So 2024 and later files can have less geographic detail.
-- Bills to require online posting in 2025 (HB 1002, SB 107, HB 999) died in committee.
-- `vendor` is now filled in for the 8 counties with public CVRs, and `vendor_evidence` says what it rests on. Dallas, Bexar, Cooke (ES&S) and Tarrant, Parker, Hidalgo (Hart) are backed by the files themselves plus Verified Voting. Webb (ES&S) and Burnet (Hart) rest on Verified Voting alone and are marked unconfirmed. `data/tx_cvr_inventory.parquet` has not been rebuilt since, so it does not have `vendor_evidence` yet.
-- Rows with `checked` = 2026-11-06 were not rechecked on November 9.
-- Raw downloads go in `raw/`, which is not committed.
+- Texas Election Code 1.012(f) (HB 5180, effective September 1, 2023) makes CVRs and ballot images open for public inspection starting the day after the final canvass, but posting them online is voluntary, which is why only a few counties do it.
+- SOS Election Advisory 2024-20 (June 6, 2024) tells counties to redact the precinct, ballot style or polling place when it could identify a voter, so the 2024 and later files can have less geographic detail.
+- The bills that would have required online posting in 2025 (HB 1002, SB 107 and HB 999) all died in committee.
+- `vendor` is now filled in for the 8 counties with public CVRs, and `vendor_evidence` says what each one is based on. Dallas, Bexar and Cooke (ES&S) and Tarrant, Parker and Hidalgo (Hart) are backed by the files themselves plus Verified Voting, but Webb (ES&S) and Burnet (Hart) are based on Verified Voting alone, so I marked them as unconfirmed, and I have not rebuilt `data/tx_cvr_inventory.parquet` since then, so it does not have `vendor_evidence` yet.
+- The rows with `checked` = 2026-11-06 were not rechecked on November 9.
+- Raw downloads go in `raw/`, which is not committed to the repo.
