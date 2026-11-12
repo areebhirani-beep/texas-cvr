@@ -97,11 +97,11 @@ Two judgment calls matter most. First, the second sheets cannot be linked to the
 
 ## AI use
 
-Claude Code (Anthropic's AI coding tool) wrote the Dallas pipeline, the format notes, the vendor column and this section on November 9, 2026. I have started checking that work by hand: on November 10, 2026 I read through both Dallas R scripts, and I confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. `CHECKLIST.md` lists the rest of what I will check, and I will update the second column below as I go.
+Claude Code (Anthropic's AI coding tool) wrote all of the code and data files in this repo: the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and the Dallas pipeline, the format notes, the vendor column and this section later that day. I have started checking that work by hand: on November 10, 2026 I read through both Dallas R scripts, and I confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. `CHECKLIST.md` lists the rest of what I will check, and I will update the second column below as I go.
 
 | File | Status |
 |---|---|
-| `README.md` | Dallas, vendor and AI use sections: AI-generated (Claude Code), not yet manually checked. Rest: from the earlier commit, authorship not recorded here |
+| `README.md` | Dallas, vendor and AI use sections: AI-generated (Claude Code), not yet manually checked. Rest (Nov 9 morning commit): also AI-generated (Claude Code), not yet manually checked |
 | `.gitignore` | AI-generated (Claude Code), not yet manually checked |
 | `CHECKLIST.md` | AI-generated (Claude Code), not yet manually checked |
 | `docs/FORMAT_NOTES.md` | AI-generated (Claude Code), not yet manually checked |
@@ -112,13 +112,13 @@ Claude Code (Anthropic's AI coding tool) wrote the Dallas pipeline, the format n
 | `data/dallas_2024_validation.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/dallas_2024_choice_crosswalk.csv` | AI-generated (Claude Code), not yet manually checked |
 | `data/verified_voting_2024_tx.csv` | AI-generated (Claude Code), not yet manually checked |
-| `data/tx_cvr_inventory.csv` | `vendor` and `vendor_evidence` columns: AI-generated (Claude Code), not yet manually checked. Other columns: from the earlier commit, authorship not recorded here |
-| `data/tx_cvr_inventory.parquet` | From the earlier commit, authorship not recorded here |
-| `data/votedatabase_tx_summary.csv` | From the earlier commit, authorship not recorded here |
-| `data/cooke_2024_general.parquet` | From the earlier commit, authorship not recorded here |
-| `R/check_links.R` | From the earlier commit, authorship not recorded here |
-| `R/cooke_2024.R` | From the earlier commit, authorship not recorded here |
-| `R/votedatabase_summary.R` | From the earlier commit, authorship not recorded here |
+| `data/tx_cvr_inventory.csv` | `vendor` and `vendor_evidence` columns: AI-generated (Claude Code), not yet manually checked. Other columns: also AI-generated (Claude Code), not yet manually checked |
+| `data/tx_cvr_inventory.parquet` | AI-generated (Claude Code), not yet manually checked |
+| `data/votedatabase_tx_summary.csv` | AI-generated (Claude Code), not yet manually checked |
+| `data/cooke_2024_general.parquet` | AI-generated (Claude Code), not yet manually checked |
+| `R/check_links.R` | AI-generated (Claude Code), not yet manually checked |
+| `R/cooke_2024.R` | AI-generated (Claude Code), not yet manually checked |
+| `R/votedatabase_summary.R` | AI-generated (Claude Code), not yet manually checked |
 
 When a file has been checked, change its status to "AI-generated, manually checked by Areeb on <date>". Use "written by Areeb" only for files written by hand.
 
