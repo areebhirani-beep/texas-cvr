@@ -97,7 +97,7 @@ There are two judgment calls that I think matter the most. The first is that the
 
 ## AI use
 
-Claude Code, which is Anthropic's AI coding tool, generated all of the code and data files in this repo, starting with the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and then the Dallas pipeline, the format notes, the vendor column and the first version of this section later that day. I have read through and reviewed all of the R code myself, starting with the two Dallas scripts on November 10, 2026 and finishing the rest by November 12, 2026, and on November 10 I also confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. I have not finished checking the data files and docs yet, so `CHECKLIST.md` lists the rest of what I am going to check, and I will update the table below as I go.
+Claude Code, which is Anthropic's AI coding tool, generated all of the code and data files in this repo, starting with the county inventory, the votedatabase summary and the Cooke example on the morning of November 9, 2026, and then the Dallas pipeline, the format notes, the vendor column and the first version of this section later that day. I have read through and reviewed most of the R code myself, starting with the two Dallas scripts on November 10, 2026 and finishing the rest by November 12, 2026, and on November 10 I also confirmed the total ballots (858,562) and the Trump (322,569) and Harris (511,118) totals against the signed canvass PDF. I have not finished checking the data files and docs yet, so `CHECKLIST.md` lists the rest of what I am going to check, and I will update the table below as I go.
 
 | File | Status |
 |---|---|
